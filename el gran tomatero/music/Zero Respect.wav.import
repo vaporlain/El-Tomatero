@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Zero Respect.wav-07c6d98cb707d3a39dc8065f94aac5ba.sample"
+
+[deps]
+
+source_file="res://music/Zero Respect.wav"
+dest_files=[ "res://.import/Zero Respect.wav-07c6d98cb707d3a39dc8065f94aac5ba.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

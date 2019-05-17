@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Title Theme.wav-54c18eab2c122f879e785f9b1b0048ce.sample"
+
+[deps]
+
+source_file="res://music/Title Theme.wav"
+dest_files=[ "res://.import/Title Theme.wav-54c18eab2c122f879e785f9b1b0048ce.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

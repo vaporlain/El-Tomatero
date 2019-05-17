@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/tomatocoin.gd" type="Script" id=1]
+[ext_resource path="res://img/Tomato coin.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 17.7858
+
+[node name="coin" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 32
+collision_mask = 32
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Visibility" ]
+fallspeed = 200
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( -1.07464, -2.04195 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
+
+position = Vector2( -3.57465, -4.54195 )
+scale = Vector2( 0.541667, 0.541667 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Animation", "Offset" ]
+
+

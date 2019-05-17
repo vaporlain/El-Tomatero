@@ -1,0 +1,182 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://scripts/bannerad.gd" type="Script" id=1]
+[ext_resource path="res://img/(Background) fence.png" type="Texture" id=2]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://music/Mecha Collection.wav" type="AudioStream" id=4]
+[ext_resource path="res://img/background_forest.png" type="Texture" id=5]
+[ext_resource path="res://scenes/cochillo-spawner.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/cochillo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/tomatocoin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://img/tiles/dirtTiles.tres" type="TileSet" id=9]
+[ext_resource path="res://scenes/scores.tscn" type="PackedScene" id=10]
+[ext_resource path="res://img/rightpad.png" type="Texture" id=11]
+[ext_resource path="res://img/leftpad.png" type="Texture" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 424.735, 25.6807 )
+
+[node name="game" type="Node2D"]
+
+position = Vector2( -100, 25 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences" type="Node2D" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( 3.05176e-005, 0 )
+
+[node name="(Background) fence" type="Sprite" parent="fences" index="0"]
+
+position = Vector2( 405.712, 469.256 )
+scale = Vector2( 0.615592, 0.615592 )
+texture = ExtResource( 2 )
+
+[node name="(Background) fence2" type="Sprite" parent="fences" index="1"]
+
+position = Vector2( 345.712, 469.256 )
+scale = Vector2( 0.615592, 0.615592 )
+texture = ExtResource( 2 )
+
+[node name="(Background) fence3" type="Sprite" parent="fences" index="2"]
+
+position = Vector2( 285.712, 469.256 )
+scale = Vector2( 0.615592, 0.615592 )
+texture = ExtResource( 2 )
+
+[node name="(Background) fence4" type="Sprite" parent="fences" index="3"]
+
+position = Vector2( 225.712, 469.256 )
+scale = Vector2( 0.615592, 0.615592 )
+texture = ExtResource( 2 )
+
+[node name="(Background) fence5" type="Sprite" parent="fences" index="4"]
+
+position = Vector2( 165.712, 469.256 )
+scale = Vector2( 0.615592, 0.615592 )
+texture = ExtResource( 2 )
+
+[node name="(Background) fence6" type="Sprite" parent="fences" index="5"]
+
+position = Vector2( 105.712, 469.256 )
+scale = Vector2( 0.615592, 0.615592 )
+texture = ExtResource( 2 )
+
+[node name="KinematicBody2D" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 279.063, 471.911 )
+scale = Vector2( 1.05967, 1.05967 )
+_sections_unfolded = [ "Visibility", "collision" ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 4 )
+volume_db = 1.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="background" type="Sprite" parent="." index="3"]
+
+position = Vector2( 284.5, 245.314 )
+scale = Vector2( 1.27865, 2.41849 )
+z_index = -100
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Animation", "Offset", "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="cochillo-spawner" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( 100.831, -17.7286 )
+cochillo_import = ExtResource( 7 )
+coin_import = ExtResource( 8 )
+
+[node name="TileMap" type="TileMap" parent="." index="5"]
+
+position = Vector2( -5.70154, -21.9918 )
+mode = 0
+tile_set = ExtResource( 9 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -65533, 4, 0, -65522, 3, 0, 3, 4, 0, 14, 3, 0, 65539, 4, 0, 65550, 3, 0, 131075, 4, 0, 131086, 3, 0, 196611, 4, 0, 196622, 3, 0, 262147, 4, 0, 262158, 3, 0, 327683, 4, 0, 327694, 3, 0, 393219, 4, 0, 393230, 3, 0, 458755, 4, 0, 458766, 3, 0, 524291, 4, 0, 524302, 3, 0, 589827, 4, 0, 589838, 3, 0, 655363, 4, 0, 655374, 3, 0, 720899, 4, 0, 720910, 3, 0, 786435, 4, 0, 786446, 3, 0, 851971, 4, 0, 851982, 3, 0, 917507, 4, 0, 917518, 3, 0, 983043, 4, 0, 983054, 3, 0, 1048579, 5, 0, 1048580, 1, 0, 1048581, 1, 0, 1048582, 1, 0, 1048583, 1, 0, 1048584, 1, 0, 1048585, 1, 0, 1048586, 1, 0, 1048587, 1, 0, 1048588, 1, 0, 1048589, 1, 0, 1048590, 5, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="scores" parent="." index="6" instance=ExtResource( 10 )]
+
+margin_left = 100.0
+margin_top = -23.0
+margin_right = 140.0
+margin_bottom = 17.0
+_sections_unfolded = [ "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect" ]
+
+[node name="rightpad" type="TouchScreenButton" parent="." index="7"]
+
+visible = false
+position = Vector2( 363.169, 382.298 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 11 )
+pressed = ExtResource( 11 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = "ui_right"
+visibility_mode = 1
+_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
+
+[node name="leftpad" type="TouchScreenButton" parent="." index="8"]
+
+visible = false
+position = Vector2( 100.611, 382.73 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 12 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = "ui_left"
+visibility_mode = 1
+_sections_unfolded = [ "Visibility", "Z Index" ]
+
+[node name="Area2D" type="Area2D" parent="." index="9"]
+
+position = Vector2( 274.774, 672.581 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+shape = SubResource( 1 )
+
+[connection signal="body_exited" from="Area2D" to="." method="_on_Despawner_body_exited"]
+
+

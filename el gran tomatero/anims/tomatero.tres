@@ -1,0 +1,27 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=2]
+
+[ext_resource path="res://img/player/Tomatero_idle_right1.png" type="Texture" id=1]
+[ext_resource path="res://img/player/Tomatero_idle_right2.png" type="Texture" id=2]
+[ext_resource path="res://img/player/Tomatero_idle_right3.png" type="Texture" id=3]
+[ext_resource path="res://img/player/Tomatero_idle_right4.png" type="Texture" id=4]
+[ext_resource path="res://img/player/Tomatero_run_right1.png" type="Texture" id=5]
+[ext_resource path="res://img/player/Tomatero_run_right2.png" type="Texture" id=6]
+[ext_resource path="res://img/player/Tomatero_run_right3.png" type="Texture" id=7]
+[ext_resource path="res://img/player/Tomatero_run_right4.png" type="Texture" id=8]
+[ext_resource path="res://img/player/Tomatero_run_right5.png" type="Texture" id=9]
+[ext_resource path="res://img/player/Tomatero_run_right6.png" type="Texture" id=10]
+
+[resource]
+
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "run",
+"speed": 15.0
+} ]
+

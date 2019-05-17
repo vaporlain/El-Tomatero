@@ -1,0 +1,159 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://img/background_tomatero.png" type="Texture" id=1]
+[ext_resource path="res://theme/retro_font1.tres" type="DynamicFont" id=2]
+[ext_resource path="res://theme/tomatero_theme.tres" type="Theme" id=3]
+[ext_resource path="res://scripts/Button.gd" type="Script" id=4]
+[ext_resource path="res://scripts/Button2.gd" type="Script" id=5]
+[ext_resource path="res://music/Mission Over.wav" type="AudioStream" id=6]
+[ext_resource path="res://scenes/highscores.tscn" type="PackedScene" id=7]
+
+
+
+[node name="gameover" type="Control" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -180.0
+margin_top = -270.0
+margin_right = 180.0
+margin_bottom = 270.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+modulate = Color( 0.187843, 0.461137, 1, 1 )
+position = Vector2( 180, 270 )
+scale = Vector2( 1.14513, 0.848127 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="1"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -111.0
+margin_top = -165.0
+margin_right = 111.0
+margin_bottom = -115.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "GAME OVER!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Button" type="Button" parent="." index="2"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -93.0
+margin_top = -104.0
+margin_right = 93.0
+margin_bottom = -56.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 3 )
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Restart"
+flat = false
+align = 1
+script = ExtResource( 4 )
+_sections_unfolded = [ "Anchor", "Hint", "Theme" ]
+
+[node name="Button2" type="Button" parent="." index="3"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -84.0
+margin_top = -29.5
+margin_right = 84.0
+margin_bottom = 29.5
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 3 )
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "menu"
+flat = false
+align = 1
+script = ExtResource( 5 )
+_sections_unfolded = [ "Theme" ]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="4"]
+
+position = Vector2( 10, 50 )
+stream = ExtResource( 6 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="highscores" parent="." index="5" instance=ExtResource( 7 )]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -160.0
+margin_top = -250.0
+margin_right = 160.0
+margin_bottom = -200.0
+
+[connection signal="button_up" from="Button" to="Button" method="_on_Button_button_up"]
+
+[connection signal="button_up" from="Button2" to="Button2" method="_on_Button2_button_up"]
+
+

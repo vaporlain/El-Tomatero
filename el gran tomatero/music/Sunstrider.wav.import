@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Sunstrider.wav-cce56c6e818135c266fe5bb9cfaa76ac.sample"
+
+[deps]
+
+source_file="res://music/Sunstrider.wav"
+dest_files=[ "res://.import/Sunstrider.wav-cce56c6e818135c266fe5bb9cfaa76ac.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

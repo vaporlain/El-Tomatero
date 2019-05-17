@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 187.405, 10 )
+_sections_unfolded = [ "Resource" ]
+
+[node name="bounds" type="Node2D" index="0"]
+
+[node name="wall1" type="StaticBody2D" parent="." index="0"]
+
+position = Vector2( 4, 520 )
+rotation = 1.5708
+input_pickable = false
+collision_layer = 2
+collision_mask = 2
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall1" index="0"]
+
+position = Vector2( -5.8808, 19.623 )
+shape = SubResource( 1 )
+
+[node name="wall2" type="StaticBody2D" parent="." index="1"]
+
+position = Vector2( 354, 519 )
+rotation = 1.5708
+input_pickable = false
+collision_layer = 2
+collision_mask = 2
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision", "Pickable", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall2" index="0"]
+
+position = Vector2( 0, -15 )
+shape = SubResource( 1 )
+
+[node name="ground" type="StaticBody2D" parent="." index="2"]
+
+position = Vector2( 174, 561 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 2
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground" index="0"]
+
+position = Vector2( 1.10803, -15 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
+
+

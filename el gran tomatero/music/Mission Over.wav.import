@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Mission Over.wav-c42f384a38bec7b7027f3861c2d5b31d.sample"
+
+[deps]
+
+source_file="res://music/Mission Over.wav"
+dest_files=[ "res://.import/Mission Over.wav-c42f384a38bec7b7027f3861c2d5b31d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/cochillo.gd" type="Script" id=1]
+[ext_resource path="res://img/knife.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 54.1336
+
+[node name="cochillo" type="KinematicBody2D"]
+
+position = Vector2( 1.72473, 0.376999 )
+scale = Vector2( 0.786209, 0.834327 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 2
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform" ]
+fallspeed = 200
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 8, 0 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 1 )
+
+
